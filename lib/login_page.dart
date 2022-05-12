@@ -18,8 +18,8 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              FlutterLogo(size: 150),
-              SizedBox(height: 50),
+              const FlutterLogo(size: 150),
+              const SizedBox(height: 50),
               _signInButton(),
             ],
           ),
@@ -29,8 +29,16 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _signInButton() {
-    return OutlineButton(
-      splashColor: Colors.grey,
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        side: const BorderSide(
+          color: Colors.grey,
+        ),
+        primary: const Color.fromARGB(255, 255, 255, 255),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40),
+        ),
+      ),
       onPressed: () {
         signInWithGoogle().then((result) {
           if (result != null) {
@@ -44,18 +52,15 @@ class _LoginPageState extends State<LoginPage> {
           }
         });
       },
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
-      highlightElevation: 0,
-      borderSide: BorderSide(color: Colors.grey),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image(image: AssetImage("assets/google_logo.png"), height: 35.0),
+          children: const <Widget>[
+            Image(image: AssetImage('assets/google_logo.jpg'), height: 35.0),
             Padding(
-              padding: const EdgeInsets.only(left: 10),
+              padding: EdgeInsets.only(left: 10),
               child: Text(
                 'Sign in with Google',
                 style: TextStyle(

@@ -54,31 +54,51 @@ class FirstScreen extends StatelessWidget {
                 email,
                 style: const TextStyle(
                     fontSize: 25,
-                    color: Colors.deepPurple,
+                    color: Color(0xFF673AB7),
                     fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 40),
-              RaisedButton(
-                onPressed: () {
-                  signOutGoogle();
-
-                  Navigator.of(context).pushAndRemoveUntil(
-                      MaterialPageRoute(builder: (context) {
-                    return LoginPage();
-                  }), ModalRoute.withName('/'));
-                },
-                color: Colors.deepPurple,
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    'Sign Out',
-                    style: TextStyle(fontSize: 25, color: Colors.white),
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xFF673AB7),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                   ),
-                ),
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40)),
-              )
+                  onPressed: () {
+                    signOutGoogle();
+                    Navigator.of(context).pushAndRemoveUntil(
+                        MaterialPageRoute(builder: (context) {
+                      return LoginPage();
+                    }), ModalRoute.withName('/'));
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Sign Out',
+                      style: TextStyle(fontSize: 25, color: Colors.white),
+                    ),
+                  )),
+              // RaisedButton(
+              //   onPressed: () {
+              //     signOutGoogle();
+              //     Navigator.of(context).pushAndRemoveUntil(
+              //         MaterialPageRoute(builder: (context) {
+              //       return LoginPage();
+              //     }), ModalRoute.withName('/'));
+              //   },
+              //   color: Colors.deepPurple,
+              //   child: const Padding(
+              //     padding: EdgeInsets.all(8.0),
+              //     child: Text(
+              //       'Sign Out',
+              //       style: TextStyle(fontSize: 25, color: Colors.white),
+              //     ),
+              //   ),
+              //   elevation: 5,
+              //   shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(40)),
+              // )
             ],
           ),
         ),
