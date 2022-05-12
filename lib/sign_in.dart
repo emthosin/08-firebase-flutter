@@ -1,3 +1,5 @@
+// MI2F_14_M. Thosin Yuhaililiul Hilmi_2031710032
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -44,4 +46,43 @@ Future<String> signInWithGoogle() async {
 Future<void> signOutGoogle() async {
   await googleSignIn.signOut();
   print("User Signed Out");
+}
+
+Future<String> signInEmail({String email, String password}) async {
+  try {
+    await _auth.signInWithEmailAndPassword(email: email, password: password);
+    return "Signed in";
+  } on FirebaseAuthException catch (e) {
+    return e.message;
+  }
+}
+
+// 4
+Future<String> signUpEmail({String email, String password}) async {
+  try {
+    await _auth.createUserWithEmailAndPassword(
+        email: email, password: password);
+    return "Signed up";
+  } on FirebaseAuthException catch (e) {
+    return e.message;
+  }
+}
+
+// 5
+Future<String> signOutEmail() async {
+  try {
+    await _auth.signOut();
+    return "Signed out";
+  } on FirebaseAuthException catch (e) {
+    return e.message;
+  }
+}
+
+// 6
+User getUserEmail() {
+  try {
+    return _auth.currentUser;
+  } on FirebaseAuthException {
+    return null;
+  }
 }

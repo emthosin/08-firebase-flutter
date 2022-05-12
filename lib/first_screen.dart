@@ -1,3 +1,5 @@
+// MI2F_14_M. Thosin Yuhaililiul Hilmi_2031710032
+
 // Copyright (c) 2019 Souvik Biswas
 import 'package:flutter/material.dart';
 import 'package:firebase_flutter/login_page.dart';
@@ -79,26 +81,6 @@ class FirstScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 25, color: Colors.white),
                     ),
                   )),
-              // RaisedButton(
-              //   onPressed: () {
-              //     signOutGoogle();
-              //     Navigator.of(context).pushAndRemoveUntil(
-              //         MaterialPageRoute(builder: (context) {
-              //       return LoginPage();
-              //     }), ModalRoute.withName('/'));
-              //   },
-              //   color: Colors.deepPurple,
-              //   child: const Padding(
-              //     padding: EdgeInsets.all(8.0),
-              //     child: Text(
-              //       'Sign Out',
-              //       style: TextStyle(fontSize: 25, color: Colors.white),
-              //     ),
-              //   ),
-              //   elevation: 5,
-              //   shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.circular(40)),
-              // )
             ],
           ),
         ),
