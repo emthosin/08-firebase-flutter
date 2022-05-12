@@ -1,10 +1,10 @@
 # firebase_flutter
 
 ## Halaman Login
-![login_page](https://user-images.githubusercontent.com/89894405/168090682-cc931e0a-8a66-4471-bf3f-4ff82474afbe.jpeg)
+![login_page](https://user-images.githubusercontent.com/89894405/168090682-cc931e0a-8a66-4471-bf3f-4ff82474afbe.jpg)
 
 ## Memilih Akun
-![memilih_akun](https://user-images.githubusercontent.com/89894405/168041411-bf461d3a-d454-4c1f-91c8-9d7509bf45ef.jpeg)
+![memilih_akun](https://user-images.githubusercontent.com/89894405/168041411-bf461d3a-d454-4c1f-91c8-9d7509bf45ef.png)
 
 ## Halaman Awal
 ![first_screen](https://user-images.githubusercontent.com/89894405/168041387-726019df-1be3-40a2-99a9-1d8079049dd9.jpeg)
