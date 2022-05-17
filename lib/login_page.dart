@@ -3,7 +3,7 @@
 import 'package:firebase_flutter/email.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_flutter/sign_in.dart';
-import 'package:firebase_flutter/first_screen.dart';
+import 'first_screenGoogle copy.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
       onPressed: () => Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const EmailPage(),
+          builder: (context) => EmailPage(),
         ),
       ),
       child: Padding(

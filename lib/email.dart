@@ -1,10 +1,11 @@
-import 'package:firebase_flutter/sign_in.dart';
+import 'package:firebase_flutter/authentication.dart';
 import 'package:flutter/material.dart';
 
-import 'first_screen.dart';
+import 'first_screenEmail.dart';
 
 class EmailPage extends StatelessWidget {
-  const EmailPage({Key key}) : super(key: key);
+  TextEditingController emailController = TextEditingController(text: "");
+  TextEditingController passwordController = TextEditingController(text: "");
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +35,7 @@ class EmailPage extends StatelessWidget {
                     decoration: const InputDecoration(
                       labelText: "Email",
                     ),
+                    controller: emailController,
                   ),
                 ),
                 SizedBox(height: size.height * 0.03),
@@ -48,6 +50,7 @@ class EmailPage extends StatelessWidget {
                     decoration: const InputDecoration(
                       labelText: "Password",
                     ),
+                    controller: passwordController,
                     obscureText: true,
                   ),
                 ),
@@ -64,14 +67,24 @@ class EmailPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(40),
                       ),
                     ),
-                    onPressed: () {
-                      signInEmail().then((result) {
-                        if (result != null) {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return FirstScreen();
-                              },
+                    onPressed: () async {
+                      await signInEmail(
+                              emailController.text, passwordController.text)
+                          .then((result) {
+                        if (result == null) {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FirstScreenEmail(
+                                        email: emailController.text,
+                                      )));
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                result,
+                                style: TextStyle(fontSize: 16),
+                              ),
                             ),
                           );
                         }
@@ -99,13 +112,22 @@ class EmailPage extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    signUpEmail().then((result) {
-                      if (result != null) {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return FirstScreen();
-                            },
+                    signUpEmail(emailController.text, passwordController.text)
+                        .then((result) {
+                      if (result == null) {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FirstScreenEmail(
+                                      email: emailController.text,
+                                    )));
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              result,
+                              style: TextStyle(fontSize: 16),
+                            ),
                           ),
                         );
                       }
