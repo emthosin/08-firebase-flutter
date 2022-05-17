@@ -6,12 +6,14 @@
 ## Memilih Akun
 ![memilih_akun](https://user-images.githubusercontent.com/89894405/168041411-bf461d3a-d454-4c1f-91c8-9d7509bf45ef.jpeg)
 
-## Halaman Awal
+## Halaman Awal Google
 ![first_screen](https://user-images.githubusercontent.com/89894405/168041387-726019df-1be3-40a2-99a9-1d8079049dd9.jpeg)
 
 ## Login Email
-![email](https://user-images.githubusercontent.com/89894405/168090674-12d821f2-d6c0-4d79-98d6-f9bba670bee6.jpeg)
-### Keterangan : Masih belum berhasil
+![email](https://user-images.githubusercontent.com/89894405/168784072-6f628a54-17fd-4ddb-8df0-a60186e86d14.jpeg)
+
+## Halaman Awal Email
+![first_screenEmail](https://user-images.githubusercontent.com/89894405/168784221-0b2a8030-fabf-4a2f-92f8-7cb81d333398.jpeg)
 
 ## Berhasil Login
-<img width="960" alt="Berhasil Login" src="https://user-images.githubusercontent.com/89894405/168091672-ef87f9e7-8403-4d64-b4a4-4f9b80b66c32.png">
+<img width="960" alt="Berhasil Login" src="https://user-images.githubusercontent.com/89894405/168784313-dc54bb9b-f951-4c48-8025-321f28aca557.png">
